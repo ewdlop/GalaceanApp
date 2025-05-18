@@ -1,7 +1,7 @@
-import { BlinnPhongMaterial, Camera, DirectLight, MeshRenderer, WebGLEngine, PrimitiveMesh } from "@galacean/engine";
+import * as GALACEAN from "@galacean/engine";
 
 // Create engine by passing in the HTMLCanvasElement id and adjust canvas size
-const engine = await WebGLEngine.create({ canvas: "canvas-id" });
+const engine = await GALACEAN.WebGLEngine.create({ canvas: "canvas-id" });
 engine.canvas.resizeByClientSize();
 
 // Get scene and create root entity
@@ -10,21 +10,21 @@ const rootEntity = scene.createRootEntity("Root");
 
 // Create light
 const lightEntity = rootEntity.createChild("Light");
-const directLight = lightEntity.addComponent(DirectLight);
+const directLight = lightEntity.addComponent(GALACEAN.DirectLight);
 lightEntity.transform.setRotation(-45, -45, 0);
 directLight.intensity = 0.4;
 
 // Create camera
 const cameraEntity = rootEntity.createChild("Camera");
-cameraEntity.addComponent(Camera);
+cameraEntity.addComponent(GALACEAN.Camera);
 cameraEntity.transform.setPosition(0, 0, 12);
 
 // Create sphere
 const meshEntity = rootEntity.createChild("Sphere");
-const meshRenderer = meshEntity.addComponent(MeshRenderer);
-const material = new BlinnPhongMaterial(engine);
+const meshRenderer = meshEntity.addComponent(GALACEAN.MeshRenderer);
+const material = new GALACEAN.BlinnPhongMaterial(engine);
 meshRenderer.setMaterial(material);
-meshRenderer.mesh = PrimitiveMesh.createSphere(engine, 1);
+meshRenderer.mesh = GALACEAN.PrimitiveMesh.createSphere(engine, 1);
 
 // Run engine
 engine.run();
