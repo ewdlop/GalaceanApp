@@ -1,0 +1,21 @@
+{
+  "name": "galaceanapp",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsc && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@galacean/engine": "^1.4.16",
+    "@galacean/engine-design": "^1.4.16",
+    "@galacean/engine-toolkit": "^1.4.3"
+  },
+  "type": "module"
+}
