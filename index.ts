@@ -25,5 +25,16 @@ const material = new GALACEAN.BlinnPhongMaterial(engine);
 meshRenderer.setMaterial(material);
 meshRenderer.mesh = GALACEAN.PrimitiveMesh.createSphere(engine, 1);
 
+// create box
+const boxEntity = rootEntity.createChild("BoxEntity");
+const boxRenderer = boxEntity.addComponent(GALACEAN.MeshRenderer);
+
+const boxMtl = new GALACEAN.PBRMaterial(engine);
+boxMtl.baseColor.set(0.6, 0.3, 0.3, 1.0);
+boxMtl.metallic = 0.0;
+boxMtl.roughness = 0.5;
+boxRenderer.mesh = GALACEAN.PrimitiveMesh.createCuboid(engine, 2, 2, 2);
+boxRenderer.setMaterial(boxMtl);
+
 // Run engine
 engine.run();
