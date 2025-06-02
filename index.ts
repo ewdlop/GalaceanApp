@@ -12,7 +12,6 @@ const rootEntity = scene.createRootEntity("Root");
 const lightEntity = rootEntity.createChild("Light");
 const directLight = lightEntity.addComponent(GALACEAN.DirectLight);
 lightEntity.transform.setRotation(-45, -45, 0);
-directLight.intensity = 0.4;
 
 // Create camera
 const cameraEntity = rootEntity.createChild("Camera");
