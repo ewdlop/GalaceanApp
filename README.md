@@ -112,3 +112,7 @@ ISC
 ## Development Notes
 
 This project was created as a learning exercise for Galacean Engine. The engine provides a powerful 3D rendering system with WebGL backend support. 
+
+## Screenshot(s)
+
+![img](./Screenshot%202025-06-03%20175415.png)
